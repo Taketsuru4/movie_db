@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>MovieDB – Search</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a href="#" class="logo">MovieDB</a>
+        <div class="nav-links" role="menubar">
+          <a class="nav-link" role="menuitem" href="#">Search</a>
+          <a class="nav-link" role="menuitem" href="#">Movies</a>
+          <a class="nav-link" role="menuitem" href="#">About</a>
+          <a class="nav-link" role="menuitem" href="#">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Search -->
+    <form id="search-form" class="searchbar" role="search" autocomplete="off">
+      <label class="sr-only" for="q">Search movies</label>
+      <input id="q" name="q" type="search" placeholder="Search movies (e.g. Inception)…"/>
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+    <!-- States -->
+    <div id="state" class="state">Type a title and press “Search”.</div>
+
+    <!-- Results -->
+    <section id="results" class="grid" aria-live="polite"></section>
+  </main>
+  <!-- Movie Details Modal -->
+<div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" data-close="true"></div>
+  <div class="modal__dialog" role="document">
+    <button class="modal__close" type="button" aria-label="Close" data-close="true">✕</button>
+    <div id="modal-content" class="modal__content">
+      <!-- filled dynamically -->
+    </div>
+  </div>
+</div>
+
+  <!-- Scripts -->
+  <script src="movies.js"></script>
+</body>
+</html>
