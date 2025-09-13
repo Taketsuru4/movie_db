@@ -137,4 +137,4 @@ function detailsMarkup(d){
 
 /* ===== Small utils ===== */
 function cap(s){ return (s||"").charAt(0).toUpperCase() + (s||"").slice(1); }
-function escapeHtml(str=""){ return str.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function escapeHtml(str=""){ return str.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }h
